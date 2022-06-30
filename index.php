@@ -1,7 +1,6 @@
 <?php
+define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
 require_once 'baseconfig.php';
-
-
 define('URL', $url);
 define('DBHOST', $dbhost);
 define('DBUSER', $dbuser);
@@ -12,9 +11,6 @@ define('SMTPHOST', $smtphost);
 define('SMTPPORT', $smtpport);
 define('SMTPUSER', $smtpuser);
 define('SMTPPASS', $smtppass);
-
-define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
-
 switch (ENVIRONMENT)
 {
 	case 'development':
